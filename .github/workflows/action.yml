@@ -1,5 +1,28 @@
 name: Sync S3 Bucket
 on: push
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
+
+      steps:
+      - name: Checkout source code.
+        uses: actions/checkout@v2
+
+        - name: Install Dependencies
+        run: npm install
+
+        - name: Build
+        run: npm run build
+
+        - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          # AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+        - name: Deploy to S3
+        run: aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET  }} --delete
 
 # jobs:
 #   deploy:
@@ -15,27 +38,3 @@ on: push
 #         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
 #         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
 #         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout source code.
-      uses: actions/checkout@v2
-
-      - name: Install Dependencies
-      run: npm install
-
-      - name: Build
-      run: npm run build
-
-      - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        # AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-      - name: Deploy to S3
-      run: aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET  }} --delete
