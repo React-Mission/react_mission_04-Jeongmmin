@@ -1,14 +1,15 @@
-name: Sync S3 Bucket
-on: push
+name: React build
+on: 
+  push:                               # master Branch에서 push 이벤트가 일어났을 때만 실행
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        uses: actions/checkout@master
-    # - uses: awact/s3-action@master
-      with:
-        args: --acl public-read --follow-symlinks --delete
+      - name: Checkout source code.   # 레포지토리 체크아웃
+        uses: actions/checkout@main
 
       - name: Install Dependencies    # 의존 파일 설치
         run: npm install
@@ -16,10 +17,12 @@ jobs:
       - name: Build                   # React Build
         run: npm run build
 
-      -name: Deploy
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'ap-northeast-2'
-        SOURCE_DIR: './build'
+      - name: Deploy                  # S3에 배포하기
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 cp \
+            --recursive \
+            --region ap-northeast-2 \
+            build s3://React-Mission/react_mission_04-Jeongmmin
