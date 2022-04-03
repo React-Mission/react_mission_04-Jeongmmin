@@ -1,7 +1,5 @@
 name: Sync S3 Bucket
-on:
-  push:
-    branches: -main # branch가 main일 때만 실행
+on: push 
 
 jobs:
   deploy:
