@@ -25,4 +25,4 @@ jobs:
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
-            build s3://React-Mission/react_mission_04-Jeongmmin
+            build s3://${{ secrets.AWS_S3_BUCKET }}
