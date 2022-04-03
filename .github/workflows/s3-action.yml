@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # - uses: actions/checkout@main
-    - uses: React-Mission/react_mission_04-Jeongmmin@main
+    - uses: ./.github/workflows/s#-action.yml@main
       with:
         args: --acl public-read --follow-symlinks --delete
       env:
