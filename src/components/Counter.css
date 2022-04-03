@@ -15,7 +15,8 @@ cursor: pointer;
 }
 
 .on_offBtn {
-  border-color:cornflowerblue;
+  /* border-color:cornflowerblue; */
+  border-color:red;
 }
 
 .plusBtn, .minusBtn {
