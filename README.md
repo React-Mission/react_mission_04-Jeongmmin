@@ -1,71 +1,56 @@
-# Getting Started with Create React App
+# 📚 React_Mission
+🦁 프로젝트 라이언 The Origin: React 최종 과제입니다.  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📌 [과제리스트](#-과제-리스트)  
 
-## Available Scripts
+📌 [미션 스크린샷](#-미션-스크린샷) 
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br/>
+<br/>
+<br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 📝 과제 리스트
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> 3차 미션  
+  - [Basic](./Basic/M4-Basic.md)  
+  - [Chanllenge](./Challenge/M4-Challenge.md)  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br/>
+<br/>
+<br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📷 미션 스크린샷
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> 4차 미션  
+- 간단한 애플리케이션을 테스트 주도 개발을 사용해서 만들기
+<p align="center">
+<img src="https://user-images.githubusercontent.com/82005305/161424373-f61ed172-b93d-413e-a113-01340fa36183.gif">
+</p>  
+<br/>
+<br/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Github Action을 이용해서 AWS S3로 앱을 자동 배포하기
+<p align="center">
+<img src="https://user-images.githubusercontent.com/82005305/161424290-61e1e8fa-22c7-4425-bdeb-240f855700ab.png">
+</p>  
 
-## Learn More
+- 배포페이지   
+[🔗 Counter](http://jm-react-bucket.s3-website.ap-northeast-2.amazonaws.com/) 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br/>
+<br/>
+<br/>
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# react_mission_04-Jeongmmin" 
+[맨 위로](#-react_mission)
