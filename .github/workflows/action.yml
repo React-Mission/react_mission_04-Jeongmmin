@@ -5,7 +5,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source code.   # 레포지토리 체크아웃
         uses: actions/checkout@master
     # - uses: awact/s3-action@master
       with:
