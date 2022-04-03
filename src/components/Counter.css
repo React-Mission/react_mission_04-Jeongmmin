@@ -1,0 +1,19 @@
+p {
+  font-size:40px;
+}
+
+button {
+  border: outset 8px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size:20px;
+}
+
+.on_offBtn {
+  border-color:cornflowerblue;
+}
+
+.plusBtn, .minusBtn {
+  padding: 10px 30px;
+}
