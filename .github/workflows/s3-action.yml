@@ -1,24 +1,21 @@
 name: Sync S3 Bucket
-on: 
+on:
   push:
-      branches:
-        -main                       # branch가 main일 때만 실행
+    branches: -main # branch가 main일 때만 실행
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout source code.   # 레포지토리 체크아웃
-      uses: actions/checkout@main
-    # - uses: React-Mission/react_mission_04-Jeongmmin@main
+      - name: Checkout source code. # 레포지토리 체크아웃
+        uses: actions/checkout@main
+      - uses: React-Mission/react_mission_04-Jeongmmin@main
 
-    - name: Build                   # React Build
-      run: npm run build
-      with:
-        args: --acl public-read --follow-symlinks --delete
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'ap-northeast-2'
-        SOURCE_DIR: 'build'
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: "ap-northeast-2"
+          SOURCE_DIR: "build"
