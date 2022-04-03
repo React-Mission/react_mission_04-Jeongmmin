@@ -1,24 +1,51 @@
-p {
-  font-size:40px;
+body {
+  background-color: #ebecf0;
+}
+
+.counterNum {
+  width: 180px;
+  margin: 20px auto;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 10px 0;
+  background-color: white;
+  border-radius: 10px;
+  background: #5f6067;
+  box-shadow: inset 5px 5px 10px #515258, inset -5px -5px 10px #6d6e76;
 }
 
 button {
-  border: outset 8px;
-  padding: 10px;
-  margin: 10px;
+  margin: 20px;
   border-radius: 10px;
-  font-size:20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 button:hover {
-cursor: pointer;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+button:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+button:disabled {
+  background-color: #ebecf0;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  cursor: default;
 }
 
 .on_offBtn {
-  /* border-color:cornflowerblue; */
-  border-color:red;
-}
-
-.plusBtn, .minusBtn {
-  padding: 10px 30px;
+  color: white;
+  text-shadow: none;
+  padding: 20px 50px;
 }
